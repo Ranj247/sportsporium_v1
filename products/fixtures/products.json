@@ -242,12 +242,12 @@
     "model": "products.product",
     "fields": {
       "sku": "pp1001200118",
-      "name": "Nike Pegasus Trail 3",
-      "description": "Find your wings with an off-road run.The Nike Pegasus Trail 3 has the same comfort you love, with a design that nods to the classic Pegasus look.Nike React foam delivers responsive cushioning while tough traction helps you stay moving through rocky terrain.More support around the midfoot helps you feel secure on your journey. Colour Shown: Black/Dark Smoke Grey/Pure Platinum",
-      "price": 75,
+      "name": "Nike MD Runner 2",
+      "description": "Nod to the running champ from the '90s.The Nike MD Runner 2 keeps the OG details in place with breathable mesh and soft leather details.Its low-top design adds a heritage Waffle sole and foam cushioning for comfort. Colour Shown: Black/Anthracite/White",
+      "price": 69.99,
       "category": 6,
       "rating": 4.7,
-      "image_url": "https://res.cloudinary.com/dvsb7k8tp/image/upload/v1638482879/MS4/SP2001200118_xl1dan.png",
+      "image_url": "https://res.cloudinary.com/dvsb7k8tp/image/upload/v1638548951/MS4/SP2001200118_nnnrto.jpg",
       "image": "SP2001200118.jpg"
     }
   },
