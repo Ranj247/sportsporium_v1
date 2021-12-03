@@ -17,10 +17,10 @@
               Outfit
           </a>
           <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-              <a href="" class="dropdown-item">Sportswear</a>
-              <a href="" class="dropdown-item">Joggers</a>
-              <a href="" class="dropdown-item">Hoddies</a>
-              <a href="" class="dropdown-item">All Outfit</a>
+              <a href="{% url 'products' %}?category=sportswear" class="dropdown-item">Sportswear</a>
+              <a href="{% url 'products' %}?category=joggers" class="dropdown-item">Joggers</a>
+              <a href="{% url 'products' %}?category=hoddies" class="dropdown-item">Hoddies</a>
+              <a href="{% url 'products' %}?category=sportswear,joggers,hoddies" class="dropdown-item">All Outfit</a>
           </div>
       </li>
 
@@ -29,9 +29,9 @@
               Footwear
           </a>
           <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-              <a href="" class="dropdown-item">Running</a>
-              <a href="" class="dropdown-item">Training</a>
-              <a href="" class="dropdown-item">All Footwear</a>
+              <a href="{% url 'products' %}?category=running" class="dropdown-item">Running</a>
+              <a href="{% url 'products' %}?category=training" class="dropdown-item">Training</a>
+              <a href="{% url 'products' %}?category=running,training" class="dropdown-item">All Footwear</a>
           </div>
       </li>
 
@@ -40,9 +40,9 @@
               Special Offers
           </a>
           <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-              <a href="" class="dropdown-item">New Arrivals</a>
-              <a href="" class="dropdown-item">Sale</a>
-              <a href="" class="dropdown-item">All Specials</a>
+              <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+              <a href="{% url 'products' %}?category=sale" class="dropdown-item">Sale</a>
+              <a href="{% url 'products' %}?category=new_arrivals,sale" class="dropdown-item">All Specials</a>
           </div>
       </li>
   </ul>
