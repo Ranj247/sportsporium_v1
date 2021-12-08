@@ -48,6 +48,7 @@
                         <div class="form-row">
                             {% with product.has_sizes as s %}
                             {% if s %}
+                                {% if s == 'outfit' %}
                                 <div class="col-12">
                                     <p><strong>Size:</strong></p>
                                     <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
@@ -58,6 +59,24 @@
                                         <option value="xl">XL</option>
                                     </select>
                                 </div>
+                                {% elif s == 'footwear' %}
+                                <div class="col-12">
+                                    <p><strong>Size:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                        <option value="36">UK3/EU36/US5</option>
+                                        <option value="37" selected>UK4/EU37/US6</option>
+                                        <option value="38">UK5/EU38/US7</option>
+                                        <option value="39">UK6/EU39/US8</option>
+                                        <option value="40">UK7/EU40/US9</option>
+                                        <option value="41">UK8/EU41/US10</option>
+                                        <option value="42">UK9/EU42/US11</option>
+                                        <option value="43">UK10/EU43/US12</option>
+                                        <option value="44">UK11/EU44/US13</option>
+                                        <option value="45">UK12/EU45/US14</option>
+                                        <option value="46">UK13/EU46/US15</option>
+                                    </select>
+                                </div>
+                                {% endif %}
                             {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
