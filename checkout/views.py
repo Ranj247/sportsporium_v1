@@ -5,6 +5,7 @@ from django.conf import settings
 
 from .forms import OrderItemForm
 from .models import OrderItem, OtherLineItem
+
 from products.models import Product
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
@@ -62,21 +63,21 @@ def checkout(request):
                 try:
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
-                        other_line_item = OtherLineItem(
+                        order_line_item = OtherLineItem(
                             order=order,
                             product=product,
                             quantity=item_data,
                         )
-                        other_line_item.save()
+                        order_line_item.save()
                     else:
                         for size, quantity in item_data['items_by_size'].items():
-                            other_line_item = OtherLineItem(
+                            order_line_item = OtherLineItem(
                                 order=order,
                                 product=product,
                                 quantity=quantity,
                                 product_size=size,
                             )
-                            other_line_item.save()
+                            order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
