@@ -36,6 +36,10 @@ body {
   background-color: #6c9494;
 }
 
+.accounts-container-min-width {
+  min-height: 70vh;
+}
+
 /* --Footer-- */
 
 .copyright {
