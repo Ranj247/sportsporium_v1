@@ -1,6 +1,6 @@
 # [Sportsporium](https://rs87801-sportsporium.herokuapp.com/)
 
-Description
+Sportsporium is an online sports emporium to buy men's footwear, clothing and sportswear.  This website has been created for my fourth milestone project as part of the Diploma in Full Stack Software Development course with Code Institute. The website is responsive on all device sizes.
 
 ***
 
@@ -44,7 +44,7 @@ Description
 
 ## Demo
 Please click on the image to open link in a new browser window.<br><br>
-![Image]() 
+![Image](readme-assets/images/Mockups.PNG) 
 
 A live demo can be found - [here](https://rs87801-sportsporium.herokuapp.com/)
 
@@ -53,14 +53,93 @@ Project Repository can be found - [here](https://github.com/Ranj247/sportsporium
 ***
 
 ## Overview
+This project is Milestone Project 4 and the final project as part of the Code Institute's FullStack Software Development Diploma Course. Main requirements are to build a full-stack website based around business logic used to control a centrally-owned dataset which contains set up authentication access mechanism and provide paid access to the site's data and purchase of the product.
+
+This project demonstrates the skills and knowledge of using the HTML5, CSS3, JavaScript, Python, Django, AWS, Relational database Postgres and Stripe payments in Back-End development. The aim of this project is to create an e-commerce web application named **Sportsporium** which is an online sports emporium to buy men's footwear, clothing and sportswear. The users can search for and purchase sports shoes, joggers, hoddies etc. and create an account to save delivery information for future use, review their history orders. The owner/administrator of the shop  (with the appropriate access) can add, edit and delete products.
+
+The project is for educational purposes only.
+---
 
 ***
 
 ## User Experience
+The User Experience for this site was planned & developed using the [5 Planes of UX Design](https://www.geeksinux.com/the-elements-of-user-experience-design/): Strategy, Scope, Structure, Skeleton, Surface. It is intended to be used as a full-stack application with a clean and user - friendly site design.
 
 ### Strategy
 #### User Stories
 
+**Viewing and navigation**
+
+| User Story ID | AS a/an                     | I want to be able to ...                            | So that I can ...                                            |
+| ------------- | --------------------------- | ----------------------------------------------------| ------------------------------------------------------------ |
+| 1.            | new user                    | immediately recognise website purpose               | identify the interest in the website content                 |
+| 2.            | new user                    | navigate the site easily                            | search for products effectively                              |
+| 3.            | new user                    | view the website on mobile and other large devices  | use it on a desktop or on the go                             |
+| 4.            | general visitor             | get in touch website owner                          | enquire about the products, and store policies               |
+| 5.            | new user & future shopper   | see product lists                                   | find which product I'd like to purchase                      |
+| 6.            | new user & future shopper   | check particular product's detail                   | check product's price, description, rating, image and sizes before buying |
+| 7.            | new user and future shopper | identify sales, and special offers                  | take advantage of special savings on products to purchase    |
+| 8.            | new user and future shopper | view the total of my purchases                      | keep an eye on the purchase budget                           |
+
+
+**Registration and User Accounts**       
+
+| User Story ID | AS a/an                     | I want to be able to ...                        | So that I can ...                                                     |
+| --------------| --------------------------- | ----------------------------------------------- | ------------------------------------------------------------          |
+| 9.            | new user and future shopper | register for an account                         | have a personal account and see my profile                            |
+| 10.           | registered user             | login/out                                       | access my personal account information                                |
+| 11.           | registered user             | reset the password in case I don't recall       | recover  access to my account                                         |
+| 12.           | registered user             | receive an email confirmation upon registration | verify account registration                                           |
+| 13.           | registered user             | have a customized dashboard                     | view order history, order confirmation, and save default information  |
+
+**Sorting and searching**      
+
+| User Story ID | AS a/an     | I want to be able to ...                                    | So that I can ...                                                         |
+| --------------| ----------- | ----------------------------------------------------------- | ------------------------------------------------------------              |
+| 14.           | Shopper     | sort the list of available products                         | easily identify the best rated, best priced and categorically sorted products |
+| 15.           | Shopper     | sort a specific category of product                         | find the best-priced or best-rated product in a specific category or sort the products in that category by name       |
+| 16.           | Shopper     | sort multiple categories of products simultaneously         | find the best-priced or best-rated products across broad categories, such as "outfit" or "footwear"       |
+| 17.           | Shopper     | search for a product by name or description                 | find a specific product I'd like to purchase                              |
+| 18.           | Shopper     | easily see what I've searched for and the number of results | quickly decide whether the product I want is available                    |
+
+
+**Purchasing the checkout**
+
+| User Story ID     | AS a/an     | I want to be able to ...                                            | So that I can ...                                            |
+| ----------------- | ----------- | ------------------------------------------------------------        | ------------------------------------------------------------ |
+| 19.               | shopper     | easily select the size and quantity of a product when purchasing it | ensure I don't accidentally select the wrong product, quantity or size |
+| 20.               | shopper     | view items in my bag to be purchased                                | decide if I want to purchase an item or edit it              |
+| 21.               | shopper     | adjust the quantity of individual items in my bag                   | easily make changes to my purchase before checkout           |
+| 22.               | shopper     | easily enter my payment information                                 | checkout quicky and with bo hassles                          |
+| 23.               | shopper     | feel my personal and payment information is safe and secure         | confidently provide the needed information to make a purchase|
+| 24.               | shopper     | view an order confirmation after checkout                           | verify that I haven't made any mistakes                      |
+| 25.               | shopper     | receive an email confirmation after checking out                    | keep the confirmation of what I've purchased for my records  |
+
+**Navigation**  
+
+| User Story ID     | AS a/an     | I want to be able to ...                                | So that I can ...                  |
+| ----------------- | ----------- | ----------------------------------------------------    | ---------------------------------- |
+| 26.               | site owner  | access product management from the homepage             | access my account                  |
+| 27.               | site owner  | access my dashboard from the homepage                   | return to my dashboard at any time |
+| 28.               | site owner  | receive a notification when there is a pending order    | know when I am making money        |
+
+**Product management**
+
+| User Story ID     | AS a/an     | I want to be able to ...                            | So that I can ...                                                       |
+| ----------------- | ----------- | ----------------------------------------------------| ------------------------------------------------------------            |
+| 29.               | site owner  | add new products                                    | add new items to my online store                                        |
+| 30.               | site owner  | edit/update products                                | update products prices, descriptions, images and other product criteria |
+| 31.               | site owner  | delete products                                     | remove erroneous products or products that are no longer available      |
+
+
+ **Authentication & account**    
+
+| User Story ID     | AS a/an     | I want to be able to ...               | So that I can ...                          |
+| ----------------- | ----------- | -------------------------------------- | ------------------------------------------ |
+| 32.               | site owner  | verify my email address                | set up my account securely                 |
+| 33.               | site owner  | update my account information          | maintain access to my account              |
+| 34.               | site owner  | logout when I am finished with my work | logout of my account                       |
+| 35.               | site owner  | reset my password                      | recover my account or upgrade its security |
 
 ### Scope
 #### Existing Features
