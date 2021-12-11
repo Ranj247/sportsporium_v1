@@ -12,8 +12,8 @@ Sportsporium is an online sports emporium to buy men's footwear, clothing and sp
     - [Strategy](#strategy)
         - [User Stories](#user-stories)
     - [Scope](#scope)
-        - [Existing Features](#existing-features)
-        - [Features Left to Implement when skills develop](#features-left-to-implement-when-skills-develop)
+        - [Functional Requirements](#functional-requirements)
+        - [Future Planned Features](#future-planned-features)
     - [Structure](#structure)
         - [Flowchart](#flowchart)
     - [Skeleton](#skeleton)
@@ -63,6 +63,8 @@ The project is for educational purposes only.
 ***
 
 ## User Experience
+The sports shoes industry is undergoing a period of huge growth, such as with popular nike shoes selling out instantly from retailers, and being re-sold at after-market values much higher than the original retail value. This site advances the user's goals by allowing users to purchase footwear, clothes and sportswear at affordable prices. 
+
 The User Experience for this site was planned & developed using the [5 Planes of UX Design](https://www.geeksinux.com/the-elements-of-user-experience-design/): Strategy, Scope, Structure, Skeleton, Surface. It is intended to be used as a full-stack application with a clean and user - friendly site design.
 
 ### Strategy
@@ -142,9 +144,15 @@ The User Experience for this site was planned & developed using the [5 Planes of
 | 35.               | site owner  | reset my password                      | recover my account or upgrade its security |
 
 ### Scope
-#### Existing Features
+#### Functional Requirements
+- Mobile-first website that is responsive on all devices.
+- Informative Landing Page.
+- The navbar has been fixed, and is accessed by clicking on the 'hamburger' icon in the top left hand corner of the screen on small and medium devices. When the 'hamburger' icon is clicked, the 'Home', 'All Products', 'Outfit', 'Footwear', and 'Special Offers' links are displayed.
+- The Search box has been replaced by an icon on small devices, which displays a search box when clicked.
+- Search by a keyword function that users can search for product by keyword.
 
-#### Features Left to Implement when skills develop
+
+#### Future Planned Features
 
 
 ### Structure
@@ -160,15 +168,18 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ### Surface
 #### Color Scheme
 - Chosen using [Image Color Picker](https://imagecolorpicker.com/en):<br><br>
-    ![Image]()<br><br>
+    ![Image](readme-assets/images/imagecolorpicker.png)<br><br>
 - Primary color: #6c9494 (Heather Color) - This color applies to the header & footer section which maintains contrast to the landing page, and hero image.
 - Background color: #555555 (Emperor Color) - This color applies to the background.
 
 #### Typography
 - Bootstrap CSS default fonts applied.
+- For the content, I have chosen the font [Roboto](https://fonts.google.com/specimen/Roboto?preview.text=All%20products%20Shoes%20&preview.text_type=custom&query=roboto) with a fallback of **sans-serif**. 'Roboto' is the one of the recommended fonts used on e-commerce sites.
 
 #### Images
-- The Hero Image is an inside view of a Nike showroom displaying the Nike shoes.
+- All Product pictures of Outfit, and Footwear are taken from the [Life Style Sports](https://www.lifestylesports.com/ie/), and [Nike](https://www.nike.com/ie/). This project is for educational purposes only so the accociated credit has been included in the [Media Credits](#media). 
+- [Shutterstock](https://www.shutterstock.com/) was used to select the site's images, full image credits can be found in the [Media Credits](#media).
+- The default image if image of the product is not available <br>![no image](readme-assets/images/noimage.png)
 
 ***
 
@@ -192,11 +203,33 @@ The User Experience for this site was planned & developed using the [5 Planes of
     - Used to compress the site's hero image.
 - [Cloudinary](https://cloudinary.com/)
     - Used to link image files to the README.md file.
+- [favicon.io](https://favicon.io/)
+    - Used to generate the site's favicon image.
+
 
 ### Front-End Technologies
-
+- [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JQuery 3.6.0](https://jquery.com/)
+    - Used as the primary JavaScript library.
+- [Bootstrap 4.5](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+    - Used as a responsive front-end framework.
 
 ### Back-End Technologies
+- [Python](https://www.python.org/)
+- [Django](https://www.djangoproject.com/)
+    - Used with Python as the full-stack web framework.
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)
+    - Used to create the site's authentication functionality.
+- [PostgreSQL](https://www.postgresql.org/)
+    - Used with Heroku to store the live site's relational database.
+
+### Other
+- [Stripe Payments](https://stripe.com/en-ie/payments)
+    - Used Stripe Elements via JavaScript for the Checkout's front-end card element, and to create payments from the back-end via Python.
+- [Amazon AWS S3](https://aws.amazon.com/s3/)
+    - Used to store the live project's static and media files
 
 ***
 
@@ -215,7 +248,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ***
 
 ## Testing
-Testing documentation can be found in a separate file [TESTING.md]()
+Testing documentation can be found in the separate [TESTING.md](TESTING.md) file.
 
 ***
 
