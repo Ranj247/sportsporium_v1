@@ -67,12 +67,22 @@ The website has been tested on different browsers and electronic device, no comp
     
 
 ### Validation
+#### HTML
 - Tested [HTML Validation](https://validator.w3.org/) No errors or warnings to show. This validator does not recognise Jinja templates & scripting, so returns errors for the lines of code where Jinja is used - this is to be expected. No errors are present in the HTML code otherwise.
-- Tested [CSS Validation](https://jigsaw.w3.org/css-validator/) No errors found.<br><br>
-    
 
+#### CSS
+- Tested [CSS Validation](https://jigsaw.w3.org/css-validator/) No errors found.<br><br>
+    ![Image](readme-assets/images/CSS-validation-report.png)<br><br>
+
+#### Javascript
 - [JSHint](https://jshint.com/) was used to validate the JavaScript code in the script.js file. No errors are present.
-- [PEP8 Online](http://pep8online.com/) was used to validate that the Python code in app.py is PEP8 compliant. No errors are present.<br><br>
-    
+
+#### Python
+- [PEP8 Online](http://pep8online.com/) was used to validate the code in Python files.
+- Expected errors were returned for the `settings.py` file:<br><br>
+    ![Image](readme-assets/images/PEP8-report.png)<br><br>
+    - `line too long (>79 characters)` in the `AUTH_PASSWORD_VALIDATORS = [{}]` settings x4
+    - This is a known issue with the built-in Django settings, and it would not be acceptable to force a line break in the dictionary value strings.
+- All other Python code is fully PEP8 compliant.
 
 ***
