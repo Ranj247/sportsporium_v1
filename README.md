@@ -145,7 +145,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
 
 ### Scope
 #### Existing Features
-- The site contains 7 separate custom apps. Each app has its own set of features.
+- The site contains 5 separate custom apps. Each app has its own set of features.
     - Home
     - Products
     - Bag
@@ -162,7 +162,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
  - All templates of this project have been built with the responsive framework Bootstrap 4.6 and also used targeted media queries to make this project responsive on all screen sizes.
 
 ## NAVIGATION BAR
-This project has two navigation bars present on large screens and folded into the dropdownlist on small devices:
+This project has two navigation bars present on large screens and folded into the drop-down list on small devices:
 1. Main navigation bar:
 - Logo  `Sportsporium` navigates user to home page.
 - `Search bar` allows any user using keywords to search for products by name, word, category.
@@ -177,7 +177,7 @@ This project has two navigation bars present on large screens and folded into th
 
 ## HOME PAGE
 
-- The home page presents a hero image which is the inside view of a Nike showroom where the shoes are displayed which hints the user that the website sells sports footwears. 
+- The home page presents a hero image which is the inside view of a Nike showroom where the shoes are displayed which hints the user that the website sells sports footwear. 
 
 ## FOOTER
 - The footer contains contact us details for the site owner if a user has any queries. 
