@@ -158,6 +158,8 @@ The User Experience for this site was planned & developed using the [5 Planes of
 ### Structure
 #### Flowchart
 - Flowchart created using [Lucidchart](https://www.lucidchart.com):<br><br>
+    ![Image](readme-assets/images/Flowcharts.png)<br><br>
+
     
 
 ### Skeleton
@@ -177,8 +179,8 @@ The User Experience for this site was planned & developed using the [5 Planes of
 - For the content, I have chosen the font [Roboto](https://fonts.google.com/specimen/Roboto?preview.text=All%20products%20Shoes%20&preview.text_type=custom&query=roboto) with a fallback of **sans-serif**. 'Roboto' is the one of the recommended fonts used on e-commerce sites.
 
 #### Images
-- All Product pictures of Outfit, and Footwear are taken from the [Life Style Sports](https://www.lifestylesports.com/ie/), and [Nike](https://www.nike.com/ie/). This project is for educational purposes only so the accociated credit has been included in the [Media Credits](#media). 
-- [Shutterstock](https://www.shutterstock.com/) was used to select the site's images, full image credits can be found in the [Media Credits](#media).
+- All Product pictures of Outfit, and Footwear are taken from the [Life Style Sports](https://www.lifestylesports.com/ie/), and [Nike](https://www.nike.com/ie/). This project is for educational purposes only so the accociated credit has been included in the [Media Credits](#media).
+- The Hero image was taken from [Shutterstock](https://www.shutterstock.com/), full image credits can be found in the [Media Credits](#media).
 - The default image if image of the product is not available <br>![no image](readme-assets/images/noimage.png)
 
 ***
@@ -265,13 +267,100 @@ Testing documentation can be found in the separate [TESTING.md](TESTING.md) file
 
 ## Deployment
 ### Local Deployment
-
+The following dependencies will need to be installed in order to run this application locally:
+- [Python3](https://www.python.org/downloads) to run the application.
+- [PIP](https://pip.pypa.io/en/stable/installing) to install app requirements.
+- [GitPod](https://www.gitpod.io/) or any preferred IDE, such as [VSCode](https://code.visualstudio.com/).
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for cloning and version control.
 
 Follow the below steps for local deployment:
 
+1. Clone the GitHub repository by entering the following command into the Git terminal:
+    - `git clone https://github.com/Ranj247/sportsporium_v1.git`
+2. After cloning the project, the below environment variables need to be set, either in your IDE's config vars, or in an `env.py` file. Use your own credentials for the values where appropriate.
+    - `DEVELOPMENT` - Set to `True`
+    - `SECRET_KEY` - The Django secret key. This can be generated from the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/).
+    - `STRIPE_PUBLIC_KEY` - This will need to be copied from the Publishable key on the [Stripe Dashboard API Keys Page](https://dashboard.stripe.com/test/apikeys). A free Stripe test account can be created [here](https://dashboard.stripe.com/register).
+    - `STRIPE_SECRET_KEY` - This will need to be copied from the Secret key on the [Stripe Dashboard API Keys Page](https://dashboard.stripe.com/test/apikeys).
+3. Create a `.gitignore` file, and add the `env.py` file, if present, to the list of files.
+4. Install all requirements from the [requirements.txt](requirements.txt) file using this command:
+    - `pip3 -r requirements.txt`
+5. Run the app using the following command in the terminal:
+    - `python3 manage.py runserver`
+6. The Django server should now run locally.
+7. After running the Django server for the first time, a new SQLite3 database file should be created automatically.
+    - `db.sqlite3`
+8. You will then need to make migrations using the below commands to create the database schema.
+    - `python3 manage.py makemigrations`
+    - `python3 manage.py migrate`
+9. To load the Categories and Products data from their respective JSON fixture files, you will need to run the below commands in the order listed, since the Products data relies on the Categories data.
+    - `python3 manage.py loaddata categories`
+    - `python3 manage.py loaddata products`
+10. Next, create a `superuser` in order to access the Django Admin Panel, by running the below command and following the subsequent prompts.
+    - `python3 manage.py createsuperuser`
+11. Once complete, Django should migrate the `migrations.py` files from each app to configure the below relational data schema.<br>
 
 
 ### Remote Deployment
+To deploy this app on Heroku, the following steps were taken:
+
+1. Create a `requirements.txt` file so Heroku can install the required dependencies.
+    - `pip3 freeze --local > requirements.txt`
+2. Create a `Procfile` containing information about the type of app that will be deployed.
+    - `web: gunicorn sportsporium.wsgi:application`
+    - Make sure to delete the blank line at the end of the Profile, as this can cause issues when deploying to Heroku later.
+3. Create a Heroku account [here](https://signup.heroku.com/), create a project app, and click the "Deploy" tab. 
+4. "Connect GitHub" as the Deployment Method, and select "Enable Automatic Deployment".
+5. Go to the "Resources" tab in your Heroku app, and in the Add-Ons section, search for the Heroku Postgres add-on.
+    - The free "Hobby" level can be selected.
+6. In the Heroku "Settings" tab, click the "Reveal Config Vars" button to configure the environment variables as outlined below, with your own credentials where appropriate.
+    - `DATABASE_URL` - Set to your Postgres database URL from the previous step.
+    - `SECRET_KEY` - The Django secret key. This can be generated from the [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/).
+    - `STRIPE_PUBLIC_KEY` - This will need to be copied from the Publishable key on the [Stripe Dashboard API Keys Page](https://dashboard.stripe.com/test/apikeys). A free Stripe test account can be created [here](https://dashboard.stripe.com/register).
+    - `STRIPE_SECRET_KEY` - This will need to be copied from the Secret key on the [Stripe Dashboard API Keys Page](https://dashboard.stripe.com/test/apikeys).
+    - `EMAIL_HOST_USER` - Your own email address that you wish to use for the site.
+    - `EMAIL_HOST_PASS` - A generated App Password from your email provider's settings. For this project, Gmail was used: https://support.google.com/accounts/answer/185833?hl=en 
+7. Update the project's `settings.py` file to connect to the remote database using the `dj_database_url` package.
+8. You will then need to make migrations again using the below commands to create the database schema.
+    - `python3 manage.py makemigrations`
+    - `python3 manage.py migrate`
+9. Load the Categories and Products data once again from their respective JSON fixture files. You will need to run the below commands in the order listed, since the Products data relies on the Categories data.
+    - `python3 manage.py loaddata categories`
+    - `python3 manage.py loaddata products`
+10. Next, create a new `superuser` in order to access the Django Admin Panel on the deployed site, by running the below command and following the subsequent prompts.
+    - `python3 manage.py createsuperuser`
+11. Create a free Amazon AWS account [here](https://portal.aws.amazon.com/billing/signup#/start).
+    - Amazon AWS S3 will be used to host the site's static and media files.
+12. Navigate to the [S3 page](https://s3.console.aws.amazon.com/s3/home?region=eu-west-1) from the AWS Console.
+13. Create a new S3 bucket, and follow the next steps to configure the bucket & complete setup.
+    - In Permissions > CORS configuration, paste in the below configuration code:
+    ```
+    [
+        {
+            "AllowedHeaders": [
+                "Authorization"
+            ],
+            "AllowedMethods": [
+                "GET"
+            ],
+            "AllowedOrigins": [
+                "*"
+            ],
+            "ExposeHeaders": []
+        }
+    ]
+    ```
+    - In Permissions > Bucket Policy, click "Edit", then "Policy Generator", and generate a policy. Paste the policy code back into the "Bucket Policy", and save.
+14. Navigate to the the [IAM section](https://console.aws.amazon.com/iam/home?region=eu-west-1#/home) of the AWS console, and follow the below steps to configure:
+    - Create a new "Group", and attach your S3 Bucket.
+    - Create a new "Policy", and attach to the group created in the previous step.
+    - Create a new "User" and attach to the same group. Download the new user credentials `.csv` file.
+15. In Heroku's Settings tab, add the below variables to your app's config variables, using your own user's credentials as the values:
+    - `AWS_ACCESS_KEY_ID`
+    - `AWS_SECRET_ACCESS_KEY`
+16. In your development IDE's console, run the below command to push the static and media files to AWS.
+    - `python3 manage.py collectstatic`
+17. The app should now be deployed to Heroku - click the "Open App" in the Heroku dashboard button to view the deployed site.
 
 
 
@@ -282,12 +371,16 @@ Follow the below steps for local deployment:
 - [favicon.io](https://favicon.io/) was used to generate the site's favicon image.
 - [Pexels](https://www.pexels.com/) used to source Hero image and customised to be used for the website.
 - [Am I Responsive](http://ami.responsivedesign.is/) - was used to create the mock-up image used in the README file.
+- All Product pictures of Outfit, and Footwear are taken from the [Life Style Sports](https://www.lifestylesports.com/ie/), and [Nike](https://www.nike.com/ie/). This project is for educational purposes only.
+- The Hero image was taken from [Shutterstock](https://www.shutterstock.com/).
+
 
 ### Content
+- README file template adapted from: https://github.com/Code-Institute-Solutions/readme-template
 
 
 ### Code Snippets
-
+- The Inspiration for the Sportsporium project came from the [Code Institute](https://codeinstitute.net/) coursework mini project - Boutique Ado. The mini project material enabled me to successfully implement the Basket, Checkout, Stripe payment, Webhooks etc.
 
 ***
 
