@@ -12,7 +12,7 @@ Sportsporium is an online sports emporium to buy men's footwear, clothing and sp
     - [Strategy](#strategy)
         - [User Stories](#user-stories)
     - [Scope](#scope)
-        - [Functional Requirements](#functional-requirements)
+        - [Existing Features](#existing-features)
         - [Future Planned Features](#future-planned-features)
     - [Structure](#structure)
         - [Flowchart](#flowchart)
@@ -55,7 +55,7 @@ Project Repository can be found - [here](https://github.com/Ranj247/sportsporium
 ## Overview
 This project is Milestone Project 4 and the final project as part of the Code Institute's FullStack Software Development Diploma Course. Main requirements are to build a full-stack website based around business logic used to control a centrally-owned dataset which contains set up authentication access mechanism and provide paid access to the site's data and purchase of the product.
 
-This project demonstrates the skills and knowledge of using the HTML5, CSS3, JavaScript, Python, Django, AWS, Relational database Postgres and Stripe payments in Back-End development. The aim of this project is to create an e-commerce web application named **Sportsporium** which is an online sports emporium to buy men's footwear, clothing and sportswear. The users can search for and purchase sports shoes, joggers, hoddies etc. and create an account to save delivery information for future use, review their history orders. The owner/administrator of the shop  (with the appropriate access) can add, edit and delete products.
+This project demonstrates the skills and knowledge of using the HTML5, CSS3, JavaScript, Python, Django, AWS, Relational database Postgres and Stripe payments in Back-End development. The aim of this project is to create an e-commerce web application named **Sportsporium** which is an online sports emporium to buy men's footwear, clothing and sportswear. The users can search for and purchase sports shoes, joggers, hoodies etc. and create an account to save delivery information for future use, review their history orders. The owner/administrator of the shop  (with the appropriate access) can add, edit and delete products.
 
 The project is for educational purposes only.
 ---
@@ -63,7 +63,7 @@ The project is for educational purposes only.
 ***
 
 ## User Experience
-The sports shoes industry is undergoing a period of huge growth, such as with popular nike shoes selling out instantly from retailers, and being re-sold at after-market values much higher than the original retail value. This site advances the user's goals by allowing users to purchase footwear, clothes and sportswear at affordable prices. 
+This site advances the user's goals by allowing users to purchase footwear, clothes and sportswear at affordable prices. 
 
 The User Experience for this site was planned & developed using the [5 Planes of UX Design](https://www.geeksinux.com/the-elements-of-user-experience-design/): Strategy, Scope, Structure, Skeleton, Surface. It is intended to be used as a full-stack application with a clean and user - friendly site design.
 
@@ -112,7 +112,7 @@ The User Experience for this site was planned & developed using the [5 Planes of
 | 19.               | shopper     | easily select the size and quantity of a product when purchasing it | ensure I don't accidentally select the wrong product, quantity or size |
 | 20.               | shopper     | view items in my bag to be purchased                                | decide if I want to purchase an item or edit it              |
 | 21.               | shopper     | adjust the quantity of individual items in my bag                   | easily make changes to my purchase before checkout           |
-| 22.               | shopper     | easily enter my payment information                                 | checkout quicky and with bo hassles                          |
+| 22.               | shopper     | easily enter my payment information                                 | checkout quickly and without hassles                          |
 | 23.               | shopper     | feel my personal and payment information is safe and secure         | confidently provide the needed information to make a purchase|
 | 24.               | shopper     | view an order confirmation after checkout                           | verify that I haven't made any mistakes                      |
 | 25.               | shopper     | receive an email confirmation after checking out                    | keep the confirmation of what I've purchased for my records  |
@@ -144,16 +144,94 @@ The User Experience for this site was planned & developed using the [5 Planes of
 | 35.               | site owner  | reset my password                      | recover my account or upgrade its security |
 
 ### Scope
-#### Functional Requirements
-- Mobile-first website that is responsive on all devices.
-- Informative Landing Page.
-- The navbar has been fixed, and is accessed by clicking on the 'hamburger' icon in the top left hand corner of the screen on small and medium devices. When the 'hamburger' icon is clicked, the 'Home', 'All Products', 'Outfit', 'Footwear', and 'Special Offers' links are displayed.
-- The Search box has been replaced by an icon on small devices, which displays a search box when clicked.
-- Search by a keyword function that users can search for product by keyword.
+#### Existing Features
+- The site contains 7 separate custom apps. Each app has its own set of features.
+    - Home
+    - Products
+    - Bag
+    - Checkout
+    - Profile
+  
+- There are 4 types of toast messages, they appear on the right side of the site when particular actions are performed by the user and provide feedback on the action taken. See the list below:
+    - Success
+    - Info
+    - Warning
+    - Error
+
+### Responsiveness
+ - All templates of this project have been built with the responsive framework Bootstrap 4.6 and also used targeted media queries to make this project responsive on all screen sizes.
+
+## NAVIGATION BAR
+This project has two navigation bars present on large screens and folded into the dropdownlist on small devices:
+1. Main navigation bar:
+- Logo  `Sportsporium` navigates user to home page.
+- `Search bar` allows any user using keywords to search for products by name, word, category.
+- `My account` dropdown menu: Links to register or sign in forms when the user is logged out. User is able to log in as a registered user and is able to access the menu links: the user's profile and the logout page. When logged in as an admin, the user has access to the dropdown links: the product management, profile app and the log out page.
+- `Shopping bag` navigate the user to the shopping bag. When the bag is empty it displays your bag is empty. When items are added to the shopping bag it is updated and displays the total price.
+2. Navigation bar: Home/All Products/Outfit/Footwear/SpecialOffers:
+- This navigation bar allows the user to check the shop collections by two different categories as  Outfit and Footwear.
+- `All Products` dropdown menu sort all products by Price, Rating, Categories and  All products.
+- `Special offer` dropdown menu filter products by New Arrivals, Sale and Displays All Specials.
+3. On top of navigation bar there is `Free Delivery banner` which informs users of the free delivery threshold and is counted when the user proceeds to the secure checkout.
+- On mobile and medium devices navigation bar is hidden behind the hamburger sign and the `Search` icon, `My Account`, `Shopping bag` visible on the main navbar. The user can navigate to the home page through the hamburger menu. 
+
+## HOME PAGE
+
+- The home page presents a hero image which is the inside view of a Nike showroom where the shoes are displayed which hints the user that the website sells sports footwears. 
+
+## FOOTER
+- The footer contains contact us details for the site owner if a user has any queries. 
+- The footer contains Social media links: Tweeter, Instagram and Facebook. 
+
+## SHOPPING BAG
+- Shopping Bag App allows the user to add/adjust/delete products to the shopping bag, view the Grand total price and details in the bag.
+- When a product is added, a preview of the shopping bag is displayed in a toast and the Grand total price/shipping price is updated.
+- There is free delivery counter that calculates how much users need to spend to get the free delivery.
+
+## CHECKOUT
+- Checkout App allows the user to safely purchase the selection of items placed in the bag using the Stripe system.
+- Any user is able to purchase the products without being registered and logged into their account. If the payment was successful the user will receive the confirmation email with the order details, confirmation page and the success toast message will display on the screen. If logged in the shipping details will be filled from the details given in the user profile.
+- The credit card details section is linked to the payment platform Stripe for a secure payment procedure.
+- When the `Complete Order` button is clicked it triggers a loading spinner that will remain while Stripe checks the credit card details.
+- If the payment did not go through, the user is redirected to the checkout form and informed of the failed procedure.
+
+## PRODUCTS
+- Product App allows the user to see products with basic product information: image, name, price, category, average rating.
+- Clicking the image takes the user to the specific product detail page.
+- Only the super-user (Admin) can have access to the EDIT/DELETE product pills and is able to edit or delete products that already exist in the database.
+- Any user can browse products using a `Sort by...` box which sort actual display for eg. Heels by Price, Rating, Name and Category.
+- There is a back to top button at the bottom right of the screen, which brings the user back to top of the page. 
+
+## PRODUCT DETAIL PAGE
+- Product detail page displays the product details (image, name, price, category, average rating, description, sizes). 
+- The quantity button is to choose an amount of products user wants to purchase.
+- Only the super-user (Admin) can have access to the EDIT/DELETE product pills and edit or delete products that already exist in the database.
 
 
-#### Future Planned Features
+## PRODUCT MANAGEMENT
+- Product management is for a super-user/admin and is visible on `My Account` dropdown menu when admin is logged into their account.
+- Only a super-user (Admin) has the possibility to add products to the database by filling in the add product form. Images can be selected directly from the admin's computer. There is an option for url links as well.
+- Only Admin can edit/delete products in the database on the product site or on the product detail page by using Delete|Edit product pills which redirect the admin to products form to be edited. The alert toast displays the information about editing the product and success toast for edits. 
+- Upon deleting the product by admin a modal alert will appears on right corner of the screen.
 
+## REGISTER
+- Provides functionality for users to create an account on the site, in order to buy products. User input is validated, and upon successful registration, a User object is created in the database.
+
+## LOGIN/LOGOUT
+- Provided users who have registered an account to access their profile, and additional features only available to authenticated users.
+
+## PROFILE
+- Allows authenticated users to see their booking history, if applicable, and provides functionality to update/add their default delivery information via a form. Successful submission of this form creates a UserProfile object in the database. In the booking history, the user can click on the booking numbers to see full details of the purchase.
+
+
+**Features Left to Implement when skills develop**
+I would like to add the followung features
+- The possibility to get discount on registration
+- The possibility to add several photos to a single product.
+- The possibility to login via social media.
+- The possibility for users to be able to specify different billing and delivery addresses, and methods.
+- Automated testing for application
+---
 
 ### Structure
 #### Flowchart
