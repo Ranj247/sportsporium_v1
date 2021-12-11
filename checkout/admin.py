@@ -1,3 +1,4 @@
+# CREDIT: Code from Boutique Ado project customised
 from django.contrib import admin
 from .models import OrderItem, OtherLineItem
 
