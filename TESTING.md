@@ -294,6 +294,7 @@ Manual testing was performed on the following elements that appear on the Checko
     ![Image](readme-assets/images/CSS-validation-report.png)<br><br>    
 
 - Test carried on the overall site colours on [a11y](https://color.a11y.com/), a Color Contrast Accessibility Validator.<br><br>
+    ![Image](readme-assets/images/website-color-contrast-report.png)<br><br>
 
 - Test carried on the Responsiveness of all pages using [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly).<br><br>
     ![Image](readme-assets/images/mobile-friendliness-test.png)<br><br>    
