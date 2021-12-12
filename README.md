@@ -241,6 +241,15 @@ I would like to add the followung features
 ### Skeleton
 #### Wireframe mock ups
 - Wireframes created using [Balsamiq](https://balsamiq.com/):<br><br>
+    ![Image](readme-assets/images/0001.png)<br>
+    ![Image](readme-assets/images/0002.png)<br>
+    ![Image](readme-assets/images/0003.png)<br>
+    ![Image](readme-assets/images/0004.png)<br>
+    ![Image](readme-assets/images/0005.png)<br>
+    ![Image](readme-assets/images/0006.png)<br>
+    ![Image](readme-assets/images/0007.png)<br>
+    ![Image](readme-assets/images/0008.png)<br>
+    ![Image](readme-assets/images/0008.png)<br>
     
 
 ### Surface
