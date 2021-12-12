@@ -44,7 +44,7 @@ Sportsporium is an online sports emporium to buy men's footwear, clothing and sp
 
 ## Demo
 Please click on the image to open link in a new browser window.<br><br>
-![Image](readme-assets/images/Mockups.PNG) 
+![Image](readme-assets/images/mockups.png)
 
 A live demo can be found - [here](https://rs87801-sportsporium.herokuapp.com/)
 
@@ -237,8 +237,6 @@ I would like to add the followung features
 #### Flowchart
 - Flowchart created using [Lucidchart](https://www.lucidchart.com):<br><br>
     ![Image](readme-assets/images/Flowcharts.png)<br><br>
-
-    
 
 ### Skeleton
 #### Wireframe mock ups
@@ -465,4 +463,5 @@ To deploy this app on Heroku, the following steps were taken:
 ## Acknowledgements
 I would like to thank:
 - My mentor, **Caleb Mbakwe**, for his guidance, valuable feedbacks, and encouragement throughout the project.
+- Code Institute Tutor Support team for help. 
 ***
