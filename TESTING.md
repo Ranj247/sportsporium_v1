@@ -290,7 +290,8 @@ Manual testing was performed on the following elements that appear on the Checko
 
 - Ran README text through [Online-Spellcheck](https://www.online-spellcheck.com/) to double-check on grammar and spelling.
 
-- Ran CSS through [Autoprefixer](https://autoprefixer.github.io/) and copied the resulted CSS codes back into style.css file.
+- Ran CSS through [Autoprefixer](https://autoprefixer.github.io/) and copied the resulted CSS codes back into style.css file.<br><br>
+    ![Image](readme-assets/images/CSS-validation-report.png)<br><br>    
 
 - Test carried on the overall site colours on [a11y](https://color.a11y.com/), a Color Contrast Accessibility Validator.<br><br>
 
